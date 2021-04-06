@@ -1,0 +1,20 @@
+###
+GET http://localhost:3000/
+
+###
+GET http://localhost:3000/teste
+
+###
+GET http://localhost:3000/ciclo/listar/123/456
+
+###
+POST http://localhost:3000/ciclo/cadastrar
+Content-Type: application/json
+
+{
+    "nome" : "Cesar Augusto",
+    "cpf" :"111.111.111-11",
+    "idade" : 21,
+    "rg" : "19489273",
+    "telefone" : "(41) 99999-9999"
+}
