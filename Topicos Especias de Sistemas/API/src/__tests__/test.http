@@ -2,9 +2,6 @@
 GET http://localhost:3000/
 
 ###
-GET http://localhost:3000/teste
-
-###
 GET http://localhost:3000/ciclo/listar/123/456
 
 ###

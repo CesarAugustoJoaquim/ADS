@@ -13,7 +13,6 @@ public class Principal
 		int opcao;
 		Cliente cliente = new Cliente();
 		Scanner sc = new Scanner(System.in);
-		ArrayList<Cliente> clientes = new ArrayList<Cliente>();
 		
 		do
 		{
@@ -39,45 +38,42 @@ public class Principal
 			
 				case 1: 
 				{
-					cliente = new Cliente();
-					System.out.println(" ================================= \n Cadastrar clientes. \n ================================= \n");
-					System.out.println("Digite o nome do cliente: ");
-					cliente.setNome(sc.next());
-					System.out.println("Digite o CPF do cliente");
-					cliente.setCpf(sc.next());
-					
-					boolean clienteEncontrado = false;
-					
-					if(!clientes.isEmpty())
-					{
-						for (Cliente clienteCadastrado : clientes) 
-						{
-							if(clienteCadastrado.getCpf() == cliente.getCpf())
-							{
-								System.out.println("O CPF já foi cadastrado");
-								clienteEncontrado = true;
-								break;
-							}
-						}
-						if(!clienteEncontrado)
-						{
-							clientes.add(cliente);
-							System.out.println("Cliente cadastrado com sucesso!");
-						}
-					}
-					else
-					{
-						clientes.add(cliente);
-						System.out.println("Cliente cadastrado com sucesso!");
-					}
+//					cliente = new Cliente();
+//					System.out.println(" ================================= \n Cadastrar clientes. \n ================================= \n");
+//					System.out.println("Digite o nome do cliente: ");
+//					cliente.setNome(sc.next());
+//					System.out.println("Digite o CPF do cliente");
+//					cliente.setCpf(sc.next());
+//					
+//					boolean clienteEncontrado = false;
+//					
+//					if(!clientes.isEmpty())
+//					{
+//						for (Cliente clienteCadastrado : clientes) 
+//						{
+//							if(clienteCadastrado.getCpf() == cliente.getCpf())
+//							{
+//								System.out.println("O CPF já foi cadastrado");
+//								clienteEncontrado = true;
+//								break;
+//							}
+//						}
+//						if(!clienteEncontrado)
+//						{
+//							clientes.add(cliente);
+//							System.out.println("Cliente cadastrado com sucesso!");
+//						}
+//					}
+//					else
+//					{
+//						clientes.add(cliente);
+//						System.out.println("Cliente cadastrado com sucesso!");
+//					}
 					break;
 				}
 				case 2:
 				{
-					System.out.println(" ================================= \n Lista de clientes. \n ================================= \n");
-					for (Cliente clienteCadastrado : clientes) {
-						System.out.println(clienteCadastrado);
-					}
+					ListarCliente.renderizar();
 					break;
 				}
 				case 3:
