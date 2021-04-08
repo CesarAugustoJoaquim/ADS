@@ -1,6 +1,8 @@
+package views;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Scanner;
+
+import models.Cliente;
 
 public class Principal 
 {
@@ -9,6 +11,7 @@ public class Principal
 	{
 		
 		int opcao;
+		Cliente cliente = new Cliente();
 		Scanner sc = new Scanner(System.in);
 		ArrayList<Cliente> clientes = new ArrayList<Cliente>();
 		
@@ -36,31 +39,44 @@ public class Principal
 			
 				case 1: 
 				{
-					Cliente cliente = new Cliente();
+					cliente = new Cliente();
 					System.out.println(" ================================= \n Cadastrar clientes. \n ================================= \n");
 					System.out.println("Digite o nome do cliente: ");
-					cliente.setNome(sc.nextLine());
+					cliente.setNome(sc.next());
 					System.out.println("Digite o CPF do cliente");
-					cliente.setCpf(sc.nextLine());
-//					for (int i = 0; i < clientes.size(); i++) 
-//					{
-//						if(cliente.getCpf() == clientes.set(i, cliente.getCpf()))
-//						{
-//							System.out.println("O CPF já foi cadastrado");
-//							break;
-//						}
-//					}
-					clientes.add(cliente);
-					System.out.println("Cliente cadastrado com sucesso!");
+					cliente.setCpf(sc.next());
+					
+					boolean clienteEncontrado = false;
+					
+					if(!clientes.isEmpty())
+					{
+						for (Cliente clienteCadastrado : clientes) 
+						{
+							if(clienteCadastrado.getCpf() == cliente.getCpf())
+							{
+								System.out.println("O CPF já foi cadastrado");
+								clienteEncontrado = true;
+								break;
+							}
+						}
+						if(!clienteEncontrado)
+						{
+							clientes.add(cliente);
+							System.out.println("Cliente cadastrado com sucesso!");
+						}
+					}
+					else
+					{
+						clientes.add(cliente);
+						System.out.println("Cliente cadastrado com sucesso!");
+					}
 					break;
 				}
 				case 2:
 				{
 					System.out.println(" ================================= \n Lista de clientes. \n ================================= \n");
-//					System.out.println(clientes);
-					for (int i = 0; i < clientes.size(); i++) 
-					{
-						System.out.println(clientes.get(i));
+					for (Cliente clienteCadastrado : clientes) {
+						System.out.println(clienteCadastrado);
 					}
 					break;
 				}

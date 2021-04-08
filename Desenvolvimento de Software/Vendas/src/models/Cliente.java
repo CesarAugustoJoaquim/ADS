@@ -1,3 +1,4 @@
+package models;
 import java.util.Date;
 
 public class Cliente 
@@ -46,4 +47,6 @@ public class Cliente
 		return "Nome: " +getNome() + " CPF: " + getCpf() + " Criado em: " + getCriadoEm();
 	}
 
+	
+	
 }
