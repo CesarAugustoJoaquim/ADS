@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import CicloSchema from "../models/CicloSchema";
 
 
 class CicloController {
@@ -20,12 +21,10 @@ class CicloController {
     }
 
     cadastrar(request: Request, response: Response) {
-        const pessoa = request.body;
-        const objeto = {
-            msg: "Cliente cadastrado com sucesso!",
-            pessoa
-        }
-        response.json(objeto);
+        const ciclo = request.body;
+        console.log(ciclo);
+        CicloSchema.create(ciclo);
+        response.json(ciclo);
     }
 
 }
