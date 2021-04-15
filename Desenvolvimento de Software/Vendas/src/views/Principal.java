@@ -1,7 +1,7 @@
 package views;
+
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import models.Cliente;
 
 public class Principal 
@@ -125,7 +125,9 @@ public class Principal
 			}
 			
 		}while(opcao != 0);
-
+		
+		sc.close();
+		
 	}
 
 }
