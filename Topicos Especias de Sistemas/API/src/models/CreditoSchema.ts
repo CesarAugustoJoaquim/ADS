@@ -1,4 +1,4 @@
-import mongoose, { model, Schema } from "mongoose";
+import { Schema } from "mongoose";
 
 const CreditoSchema = new Schema({
     nome: {
@@ -16,4 +16,4 @@ const CreditoSchema = new Schema({
     }
 );
 
-export default model("creditos", CreditoSchema);
+export { CreditoSchema };

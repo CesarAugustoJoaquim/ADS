@@ -9,5 +9,25 @@ POST http://localhost:3000/ciclo/cadastrar
 Content-Type: application/json
 
 {
-    "data" : "2021/04/08"
+    "data" : "2021-04-15",
+    "creditos" : [
+        {   
+            "nome": "Salário",
+            "valor": 5000
+        },{
+            "nome": "Investimento",
+            "valor": 50
+        }
+    ],
+    "debitos" : [
+        {
+            "nome": "Luz",
+            "valor": 300,
+            "status": "PAGO"
+        },{
+            "nome": "Água",
+            "valor": 150,
+            "status": "AGENDADO"
+        }
+    ]
 }
