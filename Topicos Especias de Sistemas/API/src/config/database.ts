@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-mongoose.connect(
+mongoose
+    .connect(
     "mongodb+srv://cesaradm:adm123@clustertopicosavancados.phciw.mongodb.net/QuintaNoite?retryWrites=true&w=majority",
     { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
