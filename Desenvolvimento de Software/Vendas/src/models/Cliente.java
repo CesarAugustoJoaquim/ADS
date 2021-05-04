@@ -43,6 +43,12 @@ public class Cliente
 	}
 	
 	@Override
+	public boolean equals(Object obj) {
+		Cliente outroCliente = (Cliente) obj;
+		return getCpf().equals(outroCliente.getCpf());
+	}
+	
+	@Override
 	public String toString() {
 		return "Nome: " +getNome() + " CPF: " + getCpf() + " Criado em: " + getCriadoEm();
 	}

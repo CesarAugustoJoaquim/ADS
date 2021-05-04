@@ -1,0 +1,29 @@
+###
+POST http://localhost:1234/pessoa/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "Cesar Augusto Joaquim",
+    "cpf": "111.111.111-11",
+    "idade": 21
+}
+
+###
+GET http://localhost:1234/pessoa/buscar/111.111.111-11
+
+###
+GET http://localhost:1234/pessoa/listar
+
+###
+
+PUT http://localhost:1234/pessoa/alterar
+Content-Type: application/json
+
+{
+    "nome": "Cesar Augusto",
+    "cpf": "111.111.111-11",
+    "idade": 22
+}
+
+###
+DELETE  http://localhost:1234/pessoa/remover/111.111.111-11
