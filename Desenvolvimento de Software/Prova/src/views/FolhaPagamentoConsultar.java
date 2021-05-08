@@ -37,7 +37,6 @@ public class FolhaPagamentoConsultar {
 			System.out.println("CPF não encontrado!");
 		}
 		
-		
 	}
 
 }
