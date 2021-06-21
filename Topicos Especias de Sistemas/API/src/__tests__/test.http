@@ -1,5 +1,5 @@
 ###
-GET http://localhost:3000/
+GET http://localhost:3000/ciclo/listar
 
 ###
 GET http://localhost:3000/ciclo/listar/608b3bd9996cc81d6420fffe

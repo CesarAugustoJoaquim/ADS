@@ -4,10 +4,15 @@ import java.util.Date;
 
 public class ItemVenda {
 
+	public ItemVenda() {
+		setCriadoEm(new Date());
+	}
+	
 	private Produto produto;
 	private int quantidade;
 	private double valor;
 	private Date criadoEm;
+	
 	public Produto getProduto() {
 		return produto;
 	}

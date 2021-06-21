@@ -5,11 +5,12 @@ class CicloController {
   async listar(request: Request, response: Response) {
     try{
       const ciclos = await CicloSchema.find();
-      response.status(200).json({
-        data: ciclos,
-        error: false,
-        msg: "Lista de ciclos de pagamento atualizada!"
-      })
+      //response.status(200).json({
+      //  data: ciclos,
+      //  error: false,
+      //  msg: "Lista de ciclos de pagamento atualizada!"
+      //})
+      response.status(200).json(ciclos);
     } catch(error){
       response.status(400).json({
         data: error,
@@ -49,11 +50,7 @@ class CicloController {
   async cadastrar(request: Request, response: Response) {
     try {
       const novoCiclo = await CicloSchema.create(request.body);
-      response.status(201).json({
-        data: novoCiclo,
-        error: false,
-        msg: "Ciclo cadastrado com sucesso!"
-      });
+      response.status(201).json(novoCiclo);
     } catch (error) {
       response.status(400).json({
         data: error,

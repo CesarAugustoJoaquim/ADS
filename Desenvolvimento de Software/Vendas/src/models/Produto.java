@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Produto {
 	
-	public Produto(String nome) {
+	public Produto() {
 		setCriadoEm(new Date());
 	}
 	

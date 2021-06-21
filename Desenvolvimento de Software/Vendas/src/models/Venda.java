@@ -6,25 +6,25 @@ import java.util.Date;
 public class Venda {
 	
 	public Venda() {	
-
+		setCriadoEm(new Date());
 	}
 	
 	private Cliente cliente;
 	private Vendedor vendedor;
-	private ArrayList<ItemVenda> produtos;
+	private ArrayList<ItemVenda> itens;
 	private Date criadoEm;
 	
+	public ArrayList<ItemVenda> getItens() {
+		return itens;
+	}
+	public void setItens(ArrayList<ItemVenda> itens) {
+		this.itens = itens;
+	}
 	public Vendedor getVendedor() {
 		return vendedor;
 	}
 	public void setVendedor(Vendedor vendedor) {
 		this.vendedor = vendedor;
-	}
-	public ArrayList<ItemVenda> getProdutos() {
-		return produtos;
-	}
-	public void setProdutos(ArrayList<ItemVenda> produtos) {
-		this.produtos = produtos;
 	}
 	public Cliente getCliente() {
 		return cliente;
@@ -38,5 +38,4 @@ public class Venda {
 	public void setCriadoEm(Date criadoEm) {
 		this.criadoEm = criadoEm;
 	}
-	
 }

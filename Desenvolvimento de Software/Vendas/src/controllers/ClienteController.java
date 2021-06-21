@@ -17,6 +17,15 @@ public class ClienteController {
 		clientes.add(cliente);
 		return true;
 	}
+	
+	public static Cliente buscarPorCpf(String cpf) {
+		for (Cliente clienteCadastrado : clientes) {
+			if(clienteCadastrado.getCpf().equals(cpf)) {
+				return clienteCadastrado;
+			}
+		}
+		return null;
+	}
 
 	public static ArrayList<Cliente> listar(){
 		return clientes;
